@@ -2,7 +2,7 @@ import { loadFixture } from '@nomicfoundation/hardhat-network-helpers';
 import { ethers } from 'hardhat';
 import { expect } from 'chai';
 
-const TARGET_GAS_PRICE = 43605;
+const TARGET_GAS_PRICE = 30000;
 
 const logGasUsage = (currentGasUsage: number) => {
 	const diff = TARGET_GAS_PRICE - currentGasUsage;
