@@ -6,6 +6,9 @@ contract Looper {
         return i;
     }
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // ! FOR LOOPS
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
     // ! 28706 - For loop
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     function loop() public pure {
@@ -35,6 +38,27 @@ contract Looper {
     //     }
     // }
 
+    // ! 21636 - For - inline doStuff(i) logic
+    // function loop() public pure {
+    //     unchecked {
+    //         for (uint256 i = 0; i < 100; i += 10) {
+    //             uint256 result = i; // Inline doStuff(i) logic
+    //             uint256 result1 = i + 1;
+    //             uint256 result2 = i + 2;
+    //             uint256 result3 = i + 3;
+    //             uint256 result4 = i + 4;
+    //             uint256 result5 = i + 5;
+    //             uint256 result6 = i + 6;
+    //             uint256 result7 = i + 7;
+    //             uint256 result8 = i + 8;
+    //             uint256 result9 = i + 9;
+    //         }
+    //     }
+    // }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // ! DO WHILE LOOPS
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
     // ! 27279 - Do While
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     // function loop() public pure {
@@ -88,24 +112,9 @@ contract Looper {
     //     }
     // }
 
-    // ! 21636 - For - inline doStuff(i) logic
-    // function loop() public pure {
-    //     unchecked {
-    //         for (uint256 i = 0; i < 100; i += 10) {
-    //             uint256 result = i; // Inline doStuff(i) logic
-    //             uint256 result1 = i + 1;
-    //             uint256 result2 = i + 2;
-    //             uint256 result3 = i + 3;
-    //             uint256 result4 = i + 4;
-    //             uint256 result5 = i + 5;
-    //             uint256 result6 = i + 6;
-    //             uint256 result7 = i + 7;
-    //             uint256 result8 = i + 8;
-    //             uint256 result9 = i + 9;
-    //         }
-    //     }
-    // }
-
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // ! ASSEMBLY
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
     // ! 25506 - Assembly For loop
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     // function loop() public pure {
@@ -117,6 +126,17 @@ contract Looper {
     //             // Simulate the doStuff operation
     //             let result := i
     //         }
+    //     }
+    // }
+
+    // ! 25200 - Assembly For loop - iszero
+    // function loop() public pure {
+    //     assembly {
+    //         let i := 0
+    //         let end := 100
+
+    //         for {} iszero(iszero(end)) { end := sub(end, 1) } { let result := i }
+    //         // Simulate the doStuff operation
     //     }
     // }
 }
